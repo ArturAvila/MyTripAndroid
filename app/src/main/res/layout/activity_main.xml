@@ -1,26 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:background="@color/colorLightGray"
     tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/colorPrimaryDark"/>
 
     <EditText
         android:id="@+id/editDistance"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:textColor="@color/colorText"
-        android:textColorHint="@color/colorDarkGray"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
+        style="@style/customEditText"
         android:gravity="center"
-        android:background="@drawable/round_et"
-
         android:hint="@string/distancia"/>
-
 
     <TextView
         android:layout_width="wrap_content"
@@ -37,13 +40,8 @@
         android:id="@+id/editPrice"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:textColor="@color/colorText"
-        android:textColorHint="@color/colorDarkGray"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
+        style="@style/customEditText"
         android:gravity="center"
-        android:background="@drawable/round_et"
         android:hint="@string/preco"/>
 
     <TextView
@@ -60,13 +58,8 @@
         android:id="@+id/editAutonomy"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:textColor="@color/colorText"
-        android:textColorHint="@color/colorDarkGray"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
+        style="@style/customEditText"
         android:gravity="center"
-        android:background="@drawable/round_et"
         android:hint="@string/autonomia"/>
 
     <TextView
@@ -101,9 +94,14 @@
 
     <Button
         android:id="@+id/buttonCalculate"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/calcular"/>
-
-
-</LinearLayout>
+        android:background="@drawable/round_btn"
+        android:text="@string/calcular"
+        android:layout_margin="15dp"
+        android:padding="20dp"
+        android:textAllCaps="true"
+        android:textColor="@color/colorLightGray"
+        android:textSize="20sp"/>
+    </LinearLayout>
+</ScrollView>
